@@ -8,6 +8,8 @@ Yobs can be arbitrarily complex and may leverage the serialization/deserializati
 
 While yobs are reasonably performant they are individual [yaml](https://yaml.org/) files at heart.
 
+Specialize yobs to serve up JSON or models with any behavior based upon their data that you fancy.
+
 Not tested on Windows.
 
 ## Use a lonely yob for configuration
@@ -16,7 +18,7 @@ In [1]: from yob import Yob
 
 In [2]: y = Yob('/tmp/yobs/A')
 
-# Use a context manager to automatically save any changes automatically
+# Use a context manager to automatically save any changes
 In [3]: with y:
    ...:     y['base_path'] = '/tmp/yobs'
    ...: 
